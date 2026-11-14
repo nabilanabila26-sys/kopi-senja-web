@@ -1,0 +1,155 @@
+/* Custom Styles for Kopi Senja - Warm & Cozy Coffee Shop Experience */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap');
+
+:root {
+  --color-bg-cream: #FAF7F2;
+  --color-espresso: #3C2A21;
+  --color-espresso-dark: #231812;
+  --color-caramel: #D48139;
+  --color-caramel-hover: #BE6E28;
+  --color-warm-beige: #F3E8DF;
+  --color-beige-dark: #E6D7C8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-bg-cream);
+  color: var(--color-espresso);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+.font-serif-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3E8DF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C7B49F;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A6907B;
+}
+
+/* Glassmorphism for Coffee theme */
+.glass-coffee {
+  background: rgba(250, 247, 242, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 129, 57, 0.15);
+}
+
+.glass-dark {
+  background: rgba(35, 24, 18, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Card hover lift */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(60, 42, 33, 0.12);
+}
+
+/* Pulse badge for busy table status */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Slide in drawer */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.drawer-slide-in {
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* Badge glow */
+.badge-glow {
+  box-shadow: 0 0 15px rgba(212, 129, 57, 0.35);
+}
+
+/* Hide scrollbar for category pills on mobile */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Stepper progress animation */
+.step-active {
+  background: #D48139;
+  color: #FFFFFF;
+}
+
+.step-done {
+  background: #3C2A21;
+  color: #FAF7F2;
+}
+
+/* Cart badge bump */
+@keyframes cartBump {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.25); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.cart-bump {
+  animation: cartBump 0.35s ease-in-out;
+}

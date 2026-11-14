@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopi Senja — Nikmati Secangkir Kopi Penuh Cerita | Coffee & Sanctuary</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Kopi Senja: Sanctuary kopi ternyaman di Bandung untuk mahasiswa dan remote worker. Dilengkapi Wi-Fi 150 Mbps dedicated, stopkontak universal di setiap meja, dan racikan kopi nusantara terbaik.">
+  <meta name="theme-color" content="#3C2A21">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN with custom warm palette config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            espresso: {
+              DEFAULT: '#3C2A21',
+              dark: '#231812',
+              light: '#5D4336',
+            },
+            caramel: {
+              DEFAULT: '#D48139',
+              dark: '#BE6E28',
+              light: '#E69A4E',
+            },
+            cream: {
+              DEFAULT: '#FAF7F2',
+              dark: '#F3E8DF',
+              warm: '#F6EFE6'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- React 18 & ReactDOM CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <!-- Babel Standalone to compile JSX directly in browser -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#FAF7F2] text-[#3C2A21] antialiased">
+  
+  <!-- Root React App Container -->
+  <div id="root">
+    <!-- Initial Skeleton Loader before React hydration -->
+    <div class="min-h-screen flex items-center justify-center bg-[#FAF7F2]">
+      <div class="text-center space-y-3">
+        <div class="w-12 h-12 rounded-2xl bg-[#3C2A21] text-amber-200 mx-auto flex items-center justify-center animate-spin">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </div>
+        <p class="text-sm font-semibold text-[#3C2A21]">Menyeduh Kopi Senja...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cafe Data Source -->
+  <script src="data.js"></script>
+
+  <!-- Lucide SVG Icons -->
+  <script src="icons.js"></script>
+
+  <!-- Main Application Script (Transpiled by Babel) -->
+  <script type="text/babel" src="app.js"></script>
+
+  <script>
+    // Initialize lucide icons if needed
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide && window.lucide.createIcons) {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
